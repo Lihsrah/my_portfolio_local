@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/CSS/Header.css";
-import logo from "../assets/logo.svg";
+import logo from "../assets/IMAGES/logo.svg";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 import { NavLink } from "react-router-dom";

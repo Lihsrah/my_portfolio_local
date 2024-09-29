@@ -1,5 +1,5 @@
 body, html {
-  cursor: url(./assets//cursor.svg) 15 15, move;
+  cursor: url(./assets/IMAGES/cursor.svg) 15 15, move;
   width: 100%;
   height: 100%;
 }
@@ -19,5 +19,5 @@ body {
 }
 
 a[href], button, input[type=checkbox], input[type=image], input[type=submit], label[for], select { 
-  cursor: url(./assets/link_cursor.svg) 15 15, move !important;
+  cursor: url(./assets/IMAGES/link_cursor.svg) 15 15, move !important;
 }
