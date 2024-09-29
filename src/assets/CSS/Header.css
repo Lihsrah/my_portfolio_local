@@ -1,0 +1,109 @@
+header {
+    max-width: 100%;
+    -webkit-animation: fadeInDown 1s ease forwards;
+    animation: fadeInDown 1s ease forwards;
+    background-color: #10e956 !important;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+header .header_wrapper {
+    padding: 5px 20px;
+    height: 100%;
+}
+
+header .header_wrapper .logo img {
+    max-width: 70px;
+}
+
+header .header_wrapper .nav_list_container .menu_icon {
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+}
+
+header .header_wrapper .menu_active {
+    background: #14e956;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+header .header_wrapper .menu_active .menu_list {
+    align-items: center;
+    background: #1e2128;
+    display: flex;
+    grid-area: menu;
+    height: 75%;
+    justify-content: flex-end;
+    text-align: right;
+    width: 40%;
+}
+
+header .header_wrapper .menu_active .menu_list ul {
+    padding-right: 30px;
+}
+
+header .header_wrapper .menu_active .menu_list ul li {
+    list-style: none;
+    background: transparent;
+    margin-top: 20px;
+}
+
+header .header_wrapper .menu_active .menu_list ul li a {
+    color: #f5f5f5;
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 #14e956, -1px -1px 0 #14e956, 1px -1px 0 #14e956, -1px 1px 0 #14e956, 1px 1px 0 #14e956;
+    text-transform: uppercase;
+}
+
+header .header_wrapper .menu_active .menu_list ul li .active::before, header .header_wrapper .menu_active .menu_list ul li a:hover::before {
+    content: " ";
+    display: inline-block;
+    background-color: transparent;
+    background-image: url('../active_link_hand.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    margin-right: 2rem;
+}
+
+
+@supports (-webkit-text-stroke:0.1px #14e956) {
+    header .header_wrapper .menu_active .menu_list ul li a {
+        -webkit-text-stroke: .1px #14e956;
+        -webkit-text-fill-color: transparent;
+    }
+}
