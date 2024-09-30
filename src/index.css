@@ -6,8 +6,6 @@
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #14e956;
-  /* transform: translateZ(0); */
 }
 
 /* Works on Chrome, Edge, and Safari */

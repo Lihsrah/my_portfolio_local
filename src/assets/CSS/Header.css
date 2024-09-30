@@ -6,9 +6,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 100;
-    -webkit-transform: none !important;
-    transform: none !important;
+    z-index: 1000;
 }
 
 
