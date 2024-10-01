@@ -1,5 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "../CSS/Home.css";
+import { FaReact } from "react-icons/fa";
+import { FaAngular } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa6";
+import { DiMongodb } from "react-icons/di";
+import { IoLogoJavascript } from "react-icons/io5";
+import { DiPhotoshop } from "react-icons/di";
+import { SiPhp, SiArangodb } from "react-icons/si";
+import { FaVuejs } from "react-icons/fa";
 
 const Home = () => {
   const sections = useRef([]); // To store references to each section
@@ -914,7 +922,11 @@ const Home = () => {
                 fill="#1E2128"
                 data-svg-origin="2573.760009765625 136.09000396728516"
                 transform="matrix(1.1728,0,0,1.1728,-447.15774,-25.92835)"
-                style={{ transformOrigin: "0px 0px", opacity: 0.788, fill: "rgb(207, 83, 81)" }}
+                style={{
+                  transformOrigin: "0px 0px",
+                  opacity: 0.788,
+                  fill: "rgb(207, 83, 81)",
+                }}
               ></path>
               <path
                 class="b-two"
@@ -922,7 +934,11 @@ const Home = () => {
                 fill="#1E2128"
                 data-svg-origin="2602.3399658203125 136.09000396728516"
                 transform="matrix(0.8272,0,0,0.8272,447.27237,21.10435)"
-                style={{ transformOrigin: "0px 0px", opacity: 0.212, fill: "rgb(78, 66, 46)" }}
+                style={{
+                  transformOrigin: "0px 0px",
+                  opacity: 0.212,
+                  fill: "rgb(78, 66, 46)",
+                }}
               ></path>
               <path
                 class="b-three"
@@ -930,7 +946,11 @@ const Home = () => {
                 fill="#1E2128"
                 data-svg-origin="2630.919921875 136.09000396728516"
                 transform="matrix(1.1728,0,0,1.1728,-457.03497,-25.92835)"
-                style={{ transformOrigin: "0px 0px", opacity: 0.788, fill: "rgb(6, 166, 70)" }}
+                style={{
+                  transformOrigin: "0px 0px",
+                  opacity: 0.788,
+                  fill: "rgb(6, 166, 70)",
+                }}
               ></path>
               <g opacity="0.5">
                 <g opacity="0.5">
@@ -1219,6 +1239,100 @@ const Home = () => {
               </g>
             </svg>
           </div>
+        </section>
+
+        <section
+          id="section2"
+          ref={(el) => (sections.current[1] = el)}
+          className="tooling hidden"
+        >
+          <div className="tooling_title">
+            <h2>Tooling</h2>
+          </div>
+          <div className="tooling_box">
+            <div className="box_content">
+              <div className="box_icon">
+              <FaReact className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>React</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <FaAngular className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>Angular</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <FaNodeJs className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>NodeJs</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <DiMongodb className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>MongoDB</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <IoLogoJavascript className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>JavaScript</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <DiPhotoshop className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>PhotoShop</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <SiPhp className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>PHP</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <SiPhp className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>PHP</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <FaVuejs className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>Vue</p>
+              </div>
+            </div>
+            <div className="box_content">
+              <div className="box_icon">
+              <SiArangodb className="icon"/>
+              </div>
+              <div className="box_text">
+                <p>ArangoDB</p>
+              </div>
+            </div>
+          </div>
+
+
         </section>
       </div>
     </>
