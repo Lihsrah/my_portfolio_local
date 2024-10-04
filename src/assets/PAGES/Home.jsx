@@ -1252,7 +1252,7 @@ const Home = () => {
           <div className="tooling_box">
             <div className="box_content">
               <div className="box_icon">
-              <FaReact className="icon"/>
+                <FaReact className="icon" />
               </div>
               <div className="box_text">
                 <p>React</p>
@@ -1260,7 +1260,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <FaAngular className="icon"/>
+                <FaAngular className="icon" />
               </div>
               <div className="box_text">
                 <p>Angular</p>
@@ -1268,7 +1268,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <FaNodeJs className="icon"/>
+                <FaNodeJs className="icon" />
               </div>
               <div className="box_text">
                 <p>NodeJs</p>
@@ -1276,7 +1276,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <DiMongodb className="icon"/>
+                <DiMongodb className="icon" />
               </div>
               <div className="box_text">
                 <p>MongoDB</p>
@@ -1284,7 +1284,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <IoLogoJavascript className="icon"/>
+                <IoLogoJavascript className="icon" />
               </div>
               <div className="box_text">
                 <p>JavaScript</p>
@@ -1292,7 +1292,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <DiPhotoshop className="icon"/>
+                <DiPhotoshop className="icon" />
               </div>
               <div className="box_text">
                 <p>PhotoShop</p>
@@ -1300,7 +1300,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <SiPhp className="icon"/>
+                <SiPhp className="icon" />
               </div>
               <div className="box_text">
                 <p>PHP</p>
@@ -1308,7 +1308,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <SiPhp className="icon"/>
+                <SiPhp className="icon" />
               </div>
               <div className="box_text">
                 <p>PHP</p>
@@ -1316,7 +1316,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <FaVuejs className="icon"/>
+                <FaVuejs className="icon" />
               </div>
               <div className="box_text">
                 <p>Vue</p>
@@ -1324,15 +1324,26 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <SiArangodb className="icon"/>
+                <SiArangodb className="icon" />
               </div>
               <div className="box_text">
                 <p>ArangoDB</p>
               </div>
             </div>
           </div>
+        </section>
 
+        <section
+          id="section3"
+          ref={(el) => (sections.current[1] = el)}
+          className="showroom hidden"
+        >
+          <div className="showroom_title">
+            <h2>Showroom</h2>
+          </div>
+          <div className="showroom_box">
 
+          </div>
         </section>
       </div>
     </>
