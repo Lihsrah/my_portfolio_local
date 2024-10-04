@@ -513,13 +513,87 @@ h2 {
     opacity: 1;
 }
 
-
 .home .showroom .button_wrapper .btn:hover::after,
 .home .showroom .button_wrapper .btn:focus::after {
     animation: none;
     display: none;
 }
 
+.home .quote {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.home .quote.hidden {
+    opacity: 0;
+}
+
+.home .quote.show {
+    opacity: 1;
+}
+
+.home .quote .quote_body {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-image: url(../IMAGES/quote_bg.png);
+    border-radius: 15px;
+    box-shadow: 0 0 1px 3px rgba(20, 233, 86, .98);
+    -webkit-box-shadow: 0 0 1px 3px rgba(20, 233, 86, .98);
+    -moz-box-shadow: 0 0 1px 3px rgba(20, 233, 86, .98);
+    display: grid;
+    grid-template-areas:
+        "left . . ."
+        ". quote quote ."
+        ". quote quote ."
+        ". . . right";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 200px;
+    justify-items: center;
+    position: relative;
+    width: 60%;
+    z-index: 10;
+}
+
+.home .quote.show .quote_body {
+    -webkit-animation: zoomIn 1.5s ease forwards;
+    animation: zoomIn 1.5s ease forwards;
+}
+
+.home .quote_body .left {
+    grid-area: left;
+    height: 100px;
+    margin-top: -2.4rem;
+    width: 100px;
+    z-index: 100;
+}
+
+.home .quote_body .right {
+    grid-area: right;
+    height: 100px;
+    margin-bottom: -2.4rem;
+    width: 100px;
+    z-index: 100;
+}
+
+.home .quote_body .quote_body_content {
+    grid-area: quote;
+}
+
+.home .quote_body .quote_body_content p {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0;
+    opacity: .8;
+    text-transform: capitalize;
+}
 
 /* Animations  */
 @keyframes fadeInRight {
@@ -657,5 +731,16 @@ h2 {
         height: 120px;
         opacity: 0;
         width: 550px;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
     }
 }
