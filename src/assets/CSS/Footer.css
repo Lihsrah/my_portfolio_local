@@ -1,0 +1,221 @@
+footer {
+    width: 100%;
+}
+
+footer .social{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5rem;
+    padding: 0;
+    width: 100%;
+}
+
+footer .social .social_title {
+    align-self: center;
+    margin-bottom: 4.5rem;
+    -webkit-transform: rotate(3.6deg);
+    transform: rotate(3.6deg);
+}
+
+@supports (-webkit-text-stroke:0.4px #000) {
+    footer .social .social_title h2 {
+        -webkit-text-stroke: .4px #000;
+        -webkit-text-fill-color: #14e956;
+    }
+}
+
+footer .social .social_title h2 {
+    color: #14e956;
+    font-family: Cyborg;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    opacity: .9;
+    text-shadow: 3px 3px 0 #14e956, -1px -1px 0 #14e956, 1px -1px 0 #14e956, -1px 1px 0 #14e956, 1px 1px 0 #14e956;
+    text-transform: uppercase;
+}
+
+footer .social .social_body {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer .social .social_body .github_box {
+    align-items: center;
+    background: #333;
+    color: #d6d6d6;
+    cursor: pointer;
+    display: flex;
+    height: 9rem;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    position: relative;
+    width: 25%;
+}
+
+footer .social .social_body .github_box p {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+footer .social .social_body .github_box svg {
+    height: 85px;
+    width: 85px;
+}
+
+footer .social .social_body .linkedin_box {
+    align-items: center;
+    background: #0077b5;
+    color: #cce4f0;
+    cursor: pointer;
+    display: flex;
+    height: 9rem;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    width: 25%
+}
+
+footer .social .social_body .linkedin_box p {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+footer .social .social_body .linkedin_box svg {
+    height: 85px;
+    width: 85px;
+}
+
+footer .social .social_body .twitter_box {
+    align-items: center;
+    background: #1da1f2;
+    color: #d2ecfc;
+    cursor: pointer;
+    display: flex;
+    height: 9rem;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    width: 25%;
+}
+
+footer .social .social_body .twitter_box p {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+footer .social .social_body .twitter_box svg {
+    height: 85px;
+    width: 85px;
+}
+
+footer .social .social_body .calendly_box {
+    align-items: center;
+    background: #006cff;
+    color: #cce2ff;
+    cursor: pointer;
+    display: flex;
+    height: 9rem;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    width: 25%;
+}
+
+footer .social .social_body .calendly_box p {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+footer .social .social_body .calendly_box svg {
+    height: 85px;
+    width: 85px;
+}
+
+footer .social .social_mail {
+    align-items: center;
+    background: #10ba46;
+    cursor: pointer;
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .social .social_mail .mail_box {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 23%;
+}
+
+footer .social .social_mail .mail_box p {
+    color: #d0fbdd;
+    font-family: Cyborg;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0 0 -.3rem;
+    text-transform: uppercase;
+}
+
+footer .social .social_mail .mail_box .mail {
+    height: 50px;
+    margin: -.3rem 0 0;
+    width: 50px;
+}
+
+footer .footer {
+    align-items: center;
+    background: #1f2128;
+    display: flex;
+    height: -webkit-max-content;
+    height: max-content;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .footer p {
+    color: #10ba45;
+    font-family: Cyborg;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin: 0;
+    padding: 2rem 0;
+    text-transform: capitalize;
+}
+
+footer .footer p span {
+    -webkit-animation: heartBeat 2.5s infinite;
+    animation: heartBeat 2.5s infinite;
+    display: inline-block;
+}
+
+@keyframes heartBeat {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    14% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    28% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    42% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    70% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
