@@ -45,11 +45,31 @@ const Projects = () => {
             </div>
             <div className="project_item_detail">
               <h4>Company Calender</h4>
-              <p><span>Problem:</span> Nigerian businesses across all sectors especially SME's struggle to comply with company legal regulations. <br/><span>Solution:</span> Built a platform that will enable these companies at the tap of a button know what regulations apply to their incorporated company without having to afford a lawyer.</p>
+              <p>
+                <span>Problem:</span> Nigerian businesses across all sectors
+                especially SME's struggle to comply with company legal
+                regulations. <br />
+                <span>Solution:</span> Built a platform that will enable these
+                companies at the tap of a button know what regulations apply to
+                their incorporated company without having to afford a lawyer.
+              </p>
               <div className="button_wrapper">
-                <button className="btn">
-                Visit →
-                </button>
+                <button className="btn">Visit →</button>
+              </div>
+            </div>
+          </div>
+          <div className="project_item reverse">
+            <div className="project_item_img">
+              <img
+                src="https://ik.imagekit.io/onyedika/slide/pipar_peinACEKO.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651255256618"
+                alt=""
+              />
+            </div>
+            <div className="project_item_detail">
+              <h4>Pipar</h4>
+              <p>A Digital Web3 Platform For Tokenizing Company Shares/Stocks. These Assets Can Be Fungible Or Non-Fungible</p>
+              <div className="button_wrapper">
+                <button className="btn">Visit →</button>
               </div>
             </div>
           </div>
