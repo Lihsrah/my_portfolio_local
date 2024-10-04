@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../CSS/Home.css";
 import { FaReact } from "react-icons/fa";
 import { FaAngular } from "react-icons/fa";
@@ -8,19 +8,17 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { DiPhotoshop } from "react-icons/di";
 import { SiPhp, SiArangodb } from "react-icons/si";
 import { FaVuejs } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const sections = useRef([]); // To store references to each section
-
   useEffect(() => {
     const currentSections = sections.current; // Store the current value of sections
-
     const observerOptions = {
       root: null, // relative to the viewport
       rootMargin: "0px",
       threshold: 0.1, // trigger when 10% of the section is visible
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const { target } = entry;
@@ -35,11 +33,9 @@ const Home = () => {
         }
       });
     }, observerOptions);
-
     currentSections.forEach((section) => {
       if (section) observer.observe(section);
     });
-
     return () => {
       // Use the stored currentSections to ensure the cleanup is based on the correct value
       currentSections.forEach((section) => {
@@ -47,6 +43,44 @@ const Home = () => {
       });
     };
   }, []);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const projectImages = [
+    {
+      imgSrc:
+        "https://ik.imagekit.io/onyedika/phoneapp_oXM1Z9FA_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1667104369642",
+      title: "PhoneBook App",
+      description:
+        "Manage your phone contacts the easy way. Create, update and delete your personal contacts all from one app. This is a MERN stack app with react redux toolkit.",
+      stack: "React",
+      url: "/",
+    },
+    {
+      imgSrc:
+        "https://ik.imagekit.io/onyedika/slide/pipar-beta?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1664831519274",
+      title: "Pipar Beta",
+      description:
+        "Start A Company And Manage Operations Across The Globe Right From Where You Are. Still in beta mode but the Authentication feature works. [DESKTOP MODE ONLY].",
+      stack: "Angular",
+      url: "/",
+    },
+  ];
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === projectImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? projectImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleProjectRedirection =() => {
+    window.open('/', '_blank'); 
+  }
 
   return (
     <>
@@ -1252,7 +1286,7 @@ const Home = () => {
           <div className="tooling_box">
             <div className="box_content">
               <div className="box_icon">
-              <FaReact className="icon"/>
+                <FaReact className="icon" />
               </div>
               <div className="box_text">
                 <p>React</p>
@@ -1260,7 +1294,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <FaAngular className="icon"/>
+                <FaAngular className="icon" />
               </div>
               <div className="box_text">
                 <p>Angular</p>
@@ -1268,7 +1302,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <FaNodeJs className="icon"/>
+                <FaNodeJs className="icon" />
               </div>
               <div className="box_text">
                 <p>NodeJs</p>
@@ -1276,7 +1310,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <DiMongodb className="icon"/>
+                <DiMongodb className="icon" />
               </div>
               <div className="box_text">
                 <p>MongoDB</p>
@@ -1284,7 +1318,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <IoLogoJavascript className="icon"/>
+                <IoLogoJavascript className="icon" />
               </div>
               <div className="box_text">
                 <p>JavaScript</p>
@@ -1292,7 +1326,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <DiPhotoshop className="icon"/>
+                <DiPhotoshop className="icon" />
               </div>
               <div className="box_text">
                 <p>PhotoShop</p>
@@ -1300,7 +1334,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <SiPhp className="icon"/>
+                <SiPhp className="icon" />
               </div>
               <div className="box_text">
                 <p>PHP</p>
@@ -1308,7 +1342,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <SiPhp className="icon"/>
+                <SiPhp className="icon" />
               </div>
               <div className="box_text">
                 <p>PHP</p>
@@ -1316,7 +1350,7 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <FaVuejs className="icon"/>
+                <FaVuejs className="icon" />
               </div>
               <div className="box_text">
                 <p>Vue</p>
@@ -1324,15 +1358,91 @@ const Home = () => {
             </div>
             <div className="box_content">
               <div className="box_icon">
-              <SiArangodb className="icon"/>
+                <SiArangodb className="icon" />
               </div>
               <div className="box_text">
                 <p>ArangoDB</p>
               </div>
             </div>
           </div>
+        </section>
 
-
+        <section
+          id="section3"
+          ref={(el) => (sections.current[2] = el)}
+          className="showroom hidden"
+        >
+          <div className="showroom_title">
+            <h2>Showroom</h2>
+          </div>
+          <div className="showroom_box">
+            <div
+              className="showroom_background"
+              style={{
+                backgroundImage: `url(${projectImages[currentIndex].imgSrc})`, // Background image changes with index
+              }}
+            ></div>
+            <div className="slider">
+              <svg
+                viewBox="0 0 70 68"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="left_arrow"
+                onClick={handlePrev}
+              >
+                <path
+                  d="M3.04432 30.5849C2.99248 26.3666 5.26104 22.4602 8.82574 20.6322L16.892 16.3342C17.6355 15.9964 20.0363 14.8954 22.4108 14.8663C27.2129 14.8072 31.4634 17.993 32.1431 19.3077L32.3838 19.7742L62.0643 19.4095C64.4268 19.3804 66.3735 21.2379 66.4019 23.5483C66.4303 25.8586 64.5298 27.7634 62.1673 27.7924L45.1926 28.001L46.4973 29.3835C47.2253 30.1559 47.6335 31.1436 47.646 32.163C47.6674 33.8999 46.5569 35.4898 44.8825 36.1157L43.5767 36.6046L44.6134 37.5209C45.5148 38.318 46.0202 39.4001 46.0346 40.567C46.0559 42.3039 44.9455 43.8938 43.271 44.5197L41.9653 45.0087L43.002 45.9249C43.9034 46.722 44.4088 47.8041 44.4232 48.971C44.4516 51.2814 42.5511 53.1861 40.1886 53.2152L14.0519 53.5364C8.13873 53.609 3.2666 48.6719 3.19112 42.5306L3.04432 30.5849Z"
+                  fill="#fdfdfd"
+                ></path>
+                <path
+                  d="M65.5447 23.5588C65.5674 25.4081 64.048 26.9309 62.157 26.9541L47.1059 27.1391L43.2535 27.1864L45.8664 29.953C46.2799 30.3906 46.776 31.1323 46.7888 32.1735C46.8059 33.5617 45.9161 34.8303 44.5762 35.333L41.9664 36.3108L44.038 38.1433C44.7609 38.7817 45.1659 39.647 45.1774 40.5775C45.1944 41.9657 44.3047 43.2343 42.9648 43.7371L40.355 44.7149L42.4266 46.5473C43.1495 47.1857 43.5545 48.051 43.5659 48.9815C43.5887 50.8308 42.0693 52.3536 40.1783 52.3769L14.0433 52.698C8.60162 52.7649 4.11814 48.1986 4.04835 42.52L3.9047 30.8308L3.90155 30.5743C3.85356 26.6695 5.94226 23.0571 9.24623 21.3615L17.2546 17.0944C19.2428 16.1896 20.9809 15.7222 22.4211 15.7045C26.8461 15.6502 30.8562 18.6745 31.3779 19.686L31.8592 20.6191L32.929 20.6059L62.0746 20.2477C63.9656 20.2245 65.5219 21.7095 65.5447 23.5588ZM67.2591 23.5377C67.225 20.7596 64.8948 18.5362 62.054 18.5712L32.9084 18.9293C32.0021 17.1764 27.3346 13.9673 22.4005 14.0279C19.9385 14.0582 17.4912 15.1363 16.4835 15.5981L8.42737 19.8892C4.54236 21.8837 2.13192 26.1055 2.1871 30.5954C2.1871 30.5954 2.18822 30.6859 2.19026 30.8519C2.21325 32.723 2.33391 42.5411 2.33391 42.5411C2.41486 49.1284 7.693 54.4529 14.0639 54.3746C14.0639 54.3746 39.8508 54.0577 40.1989 54.0534C43.0397 54.0185 45.3145 51.7386 45.2804 48.9605C45.2625 47.5018 44.6018 46.2087 43.5773 45.3024C45.5334 44.5707 46.9184 42.7226 46.8918 40.5564C46.8739 39.0978 46.2133 37.8047 45.1887 36.8984C47.1448 36.1667 48.5299 34.3186 48.5032 32.1524C48.4873 30.8581 47.9587 29.6975 47.1265 28.8157L62.1776 28.6307C65.0184 28.5958 67.2932 26.3158 67.2591 23.5377Z"
+                  fill="#1e2128"
+                ></path>
+              </svg>
+              <svg
+                viewBox="0 0 70 68"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="right_arrow"
+                onClick={handleNext}
+              >
+                <path
+                  d="M3.04432 30.5849C2.99248 26.3666 5.26104 22.4602 8.82574 20.6322L16.892 16.3342C17.6355 15.9964 20.0363 14.8954 22.4108 14.8663C27.2129 14.8072 31.4634 17.993 32.1431 19.3077L32.3838 19.7742L62.0643 19.4095C64.4268 19.3804 66.3735 21.2379 66.4019 23.5483C66.4303 25.8586 64.5298 27.7634 62.1673 27.7924L45.1926 28.001L46.4973 29.3835C47.2253 30.1559 47.6335 31.1436 47.646 32.163C47.6674 33.8999 46.5569 35.4898 44.8825 36.1157L43.5767 36.6046L44.6134 37.5209C45.5148 38.318 46.0202 39.4001 46.0346 40.567C46.0559 42.3039 44.9455 43.8938 43.271 44.5197L41.9653 45.0087L43.002 45.9249C43.9034 46.722 44.4088 47.8041 44.4232 48.971C44.4516 51.2814 42.5511 53.1861 40.1886 53.2152L14.0519 53.5364C8.13873 53.609 3.2666 48.6719 3.19112 42.5306L3.04432 30.5849Z"
+                  fill="#fdfdfd"
+                ></path>
+                <path
+                  d="M65.5447 23.5588C65.5674 25.4081 64.048 26.9309 62.157 26.9541L47.1059 27.1391L43.2535 27.1864L45.8664 29.953C46.2799 30.3906 46.776 31.1323 46.7888 32.1735C46.8059 33.5617 45.9161 34.8303 44.5762 35.333L41.9664 36.3108L44.038 38.1433C44.7609 38.7817 45.1659 39.647 45.1774 40.5775C45.1944 41.9657 44.3047 43.2343 42.9648 43.7371L40.355 44.7149L42.4266 46.5473C43.1495 47.1857 43.5545 48.051 43.5659 48.9815C43.5887 50.8308 42.0693 52.3536 40.1783 52.3769L14.0433 52.698C8.60162 52.7649 4.11814 48.1986 4.04835 42.52L3.9047 30.8308L3.90155 30.5743C3.85356 26.6695 5.94226 23.0571 9.24623 21.3615L17.2546 17.0944C19.2428 16.1896 20.9809 15.7222 22.4211 15.7045C26.8461 15.6502 30.8562 18.6745 31.3779 19.686L31.8592 20.6191L32.929 20.6059L62.0746 20.2477C63.9656 20.2245 65.5219 21.7095 65.5447 23.5588ZM67.2591 23.5377C67.225 20.7596 64.8948 18.5362 62.054 18.5712L32.9084 18.9293C32.0021 17.1764 27.3346 13.9673 22.4005 14.0279C19.9385 14.0582 17.4912 15.1363 16.4835 15.5981L8.42737 19.8892C4.54236 21.8837 2.13192 26.1055 2.1871 30.5954C2.1871 30.5954 2.18822 30.6859 2.19026 30.8519C2.21325 32.723 2.33391 42.5411 2.33391 42.5411C2.41486 49.1284 7.693 54.4529 14.0639 54.3746C14.0639 54.3746 39.8508 54.0577 40.1989 54.0534C43.0397 54.0185 45.3145 51.7386 45.2804 48.9605C45.2625 47.5018 44.6018 46.2087 43.5773 45.3024C45.5334 44.5707 46.9184 42.7226 46.8918 40.5564C46.8739 39.0978 46.2133 37.8047 45.1887 36.8984C47.1448 36.1667 48.5299 34.3186 48.5032 32.1524C48.4873 30.8581 47.9587 29.6975 47.1265 28.8157L62.1776 28.6307C65.0184 28.5958 67.2932 26.3158 67.2591 23.5377Z"
+                  fill="#1e2128"
+                ></path>
+              </svg>
+              
+              {projectImages.map((project, index) => (
+                <div
+                  key={index}
+                  className={`slide ${currentIndex === index ? "active" : ""}`}
+                >
+                  <img
+                    src={project.imgSrc}
+                    alt="project img"
+                    className="image"
+                  />
+                  <div className="detail">
+                    <h4>{project.title}</h4>
+                    <p className="desc">{project.description}</p>
+                    <span>
+                      <p className="stack">{project.stack}</p>
+                      <Link to="/" target="_blank">visit ↵</Link>
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="button_wrapper">
+             <button className="btn" onClick={handleProjectRedirection}>
+                All Project Details
+             </button>
+          </div>
         </section>
       </div>
     </>
