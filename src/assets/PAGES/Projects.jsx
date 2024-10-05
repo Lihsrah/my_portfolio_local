@@ -67,7 +67,103 @@ const Projects = () => {
             </div>
             <div className="project_item_detail">
               <h4>Pipar</h4>
-              <p>A Digital Web3 Platform For Tokenizing Company Shares/Stocks. These Assets Can Be Fungible Or Non-Fungible</p>
+              <p>
+                A Digital Web3 Platform For Tokenizing Company Shares/Stocks.
+                These Assets Can Be Fungible Or Non-Fungible
+              </p>
+              <div className="button_wrapper">
+                <button className="btn">Visit →</button>
+              </div>
+            </div>
+          </div>
+          <div className="project_item">
+            <div className="project_item_img">
+              <img
+                src="https://ik.imagekit.io/onyedika/slide/movie_Si8QWOouP.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651255256396"
+                alt=""
+              />
+            </div>
+            <div className="project_item_detail">
+              <h4>React Movie</h4>
+              <p>
+                Stay Upto Date With Trending Movies, See The Authors Of These
+                Movies And Their Casts. Also View The Ratings!
+              </p>
+              <div className="button_wrapper">
+                <button className="btn">Visit →</button>
+              </div>
+            </div>
+          </div>
+          <div className="project_item reverse">
+            <div className="project_item_img">
+              <img
+                src="https://ik.imagekit.io/onyedika/slide/natour_QGZwpr7Ta.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651255256510"
+                alt=""
+              />
+            </div>
+            <div className="project_item_detail">
+              <h4>Natour</h4>
+              <p>
+                A Platform That Helps You Discover The Most Intriguing Locations
+                For Your Vacations. Book Hotels And Spa's At A Cheaper Rate
+              </p>
+              <div className="button_wrapper">
+                <button className="btn">Visit →</button>
+              </div>
+            </div>
+          </div>
+          <div className="project_item">
+            <div className="project_item_img">
+              <img
+                src="https://ik.imagekit.io/onyedika/slide/ncehr_GV14iEwWG.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651255256179"
+                alt=""
+              />
+            </div>
+            <div className="project_item_detail">
+              <h4>Ncehr</h4>
+              <p>
+                An NGO That Focuses On Solving The Problem Of Climate Change In
+                Africa. They're Also Inter-Disciplinary With Various Academic
+                Institutions involved
+              </p>
+              <div className="button_wrapper">
+                <button className="btn">Visit →</button>
+              </div>
+            </div>
+          </div>
+          <div className="project_item reverse">
+            <div className="project_item_img">
+              <img
+                src="https://ik.imagekit.io/onyedika/slide/guvve_sUg2If5kc.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651255256276"
+                alt=""
+              />
+            </div>
+            <div className="project_item_detail">
+              <h4>Gruvve</h4>
+              <p>
+                Web3 Startup Accelerator, Both In Finance And Human Resource.
+                They Look For Web3 Contributors Who Want To Make An Impact In
+                The Web3 Space
+              </p>
+              <div className="button_wrapper">
+                <button className="btn">Visit →</button>
+              </div>
+            </div>
+          </div>
+          <div className="project_item">
+            <div className="project_item_img">
+              <img
+                src="https://ik.imagekit.io/onyedika/slide/web3-forum_2lXPIycqd.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651255256840"
+                alt=""
+              />
+            </div>
+            <div className="project_item_detail">
+              <h4>Web3 Forum</h4>
+              <p>
+                A Web3 Forum Built On Top Of Polygon. Anyone Can Add Comments
+                After Signing In With Metamask. This Was A Follow-Up Tutorial By
+                Pointer.gg
+              </p>
               <div className="button_wrapper">
                 <button className="btn">Visit →</button>
               </div>
