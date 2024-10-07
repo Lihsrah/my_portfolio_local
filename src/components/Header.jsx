@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "../assets/CSS/Header.css";
-// import logo from "../assets/IMAGES/logo.svg";
 import logo_1 from "../assets/IMAGES/logo_1.jpg";
-import { BiMenuAltRight } from "react-icons/bi";
-import { RxCross1 } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -20,26 +17,10 @@ const Header = () => {
 
           <div className="nav_list_container">
             <div className={menu ? "menu_active" : "menu"}>
-              <div className="menu_icon_container flex flex-center justify-center">
-                {menu ? (
-                  <>
-                    <RxCross1
-                      className="menu_icon"
-                      onClick={(e) => {
-                        showMenu((menu) => !menu);
-                      }}
-                    />
-                  </>
-                ) : (
-                  <>
-                    <BiMenuAltRight
-                      className="menu_icon"
-                      onClick={(e) => {
-                        showMenu((menu) => !menu);
-                      }}
-                    />
-                  </>
-                )}
+              <div className="flex flex-center justify-center">
+                <div className={menu ? "nav_button nav_active" : "nav_button" } onClick={(e) => {showMenu((menu) => !menu)}}>
+                  <span class="nav_icon">&nbsp;</span>
+                </div>
               </div>
 
               <div className={menu ? "menu_list" : "d-none"}>
