@@ -3,7 +3,7 @@
   src: url(./assets/FONTS/exospace.ttf) format('truetype');
 }
 
-/* Works on Firefox */
+/* Works on Firefox test*/
 * {
   scrollbar-width: thin;
 }
