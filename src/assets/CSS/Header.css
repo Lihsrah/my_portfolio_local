@@ -21,6 +21,13 @@ header .header_wrapper .logo img {
     border-radius: 8px;
 }
 
+header .header_wrapper .nav_list_container .nav_toggle_container {
+    right: 2rem;
+    top: 15px;
+    position: fixed;
+    z-index: 2000;
+}
+
 header .header_wrapper .nav_list_container .nav_button {
     align-items: center;
     -webkit-animation: wobble 1s ease 10s forwards;
@@ -32,11 +39,7 @@ header .header_wrapper .nav_list_container .nav_button {
     display: flex;
     height: 45px;
     justify-content: center;
-    position: fixed;
-    right: 5rem;
-    top: 15px;
     width: 60px;
-    z-index: 2000;
 }
 
 header .header_wrapper .nav_button .nav_icon {
@@ -51,9 +54,6 @@ header .header_wrapper .nav_button .nav_icon {
     width: 2.7rem;
 }
 
-header .header_wrapper .nav_list_container input {
-    display: none;
-}
 
 header .header_wrapper .nav_button .nav_icon::before {
     content: "";
@@ -406,4 +406,458 @@ header .header_wrapper .menu_active .menu_list ul li a:hover::before {
         -webkit-transform: translate3d(-5%, 0, 0) rotate(-1deg) scale(1.1);
         transform: translate3d(-5%, 0, 0) rotate(-1deg) scale(1.1);
     }
+}
+
+/* responsiveness  */
+@media (min-width: 760px) and (max-width: 1024px) {
+    header {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    header {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 479px) {
+    header {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    header .header_wrapper .menu_active .menu_list ul li a {
+        font-size: 3rem;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 759px) {
+    header .header_wrapper .menu_active .menu_list ul li a {
+        font-size: 2.1rem;
+        letter-spacing: 4px;
+        text-shadow:
+            3px 3px 0 #12d24d,
+            -1px -1px 0 #12d24d,
+            1px -1px 0 #12d24d,
+            -1px 1px 0 #12d24d,
+            1px 1px 0 #12d24d;
+
+        @supports (-webkit-text-stroke: .1px #14e956) {
+            -webkit-text-stroke: .1px #14e956;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    header .header_wrapper .menu_active .header_socials .github .github_box p {
+        font-size: 5.2rem;
+        padding: 4.5rem;
+    }
+
+
+    header .header_wrapper .menu_active .header_socials .github .github_box svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box p {
+        font-size: 5.2rem;
+        padding: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box p {
+        font-size: 5.2rem;
+        padding: 4.5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box p {
+        font-size: 5.2rem;
+        padding: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    header .header_wrapper .menu_active .menu_list ul li .active::before,
+    header .header_wrapper .menu_active .menu_list ul li a:hover::before {
+        width: 52px;
+        height: 52px;
+        margin-right: 1.7rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    header .header_wrapper .menu_active .header_socials .github .github_box p {
+        font-size: 4.6rem;
+        padding-right: 2rem;
+    }
+
+
+    header .header_wrapper .menu_active .header_socials .github .github_box svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box p {
+        font-size: 4.6rem;
+        padding: 4.5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box p {
+        font-size: 4.6rem;
+        padding: 4rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box p {
+        font-size: 4.6rem;
+        padding: 4.5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    header .header_wrapper .menu_active .menu_list ul li .active::before,
+    header .header_wrapper .menu_active .menu_list ul li a:hover::before {
+        width: 43px;
+        height: 43px;
+        margin-right: 1.4rem;
+    }
+
+    header .header_wrapper .nav_list_container .nav_button {
+        width: 42px;
+        height: 32px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    header .header_wrapper .menu_active .header_socials .github .github_box p {
+        font-size: 3rem;
+        padding: 1.4rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .github .github_box svg {
+        transform: rotate(0turn);
+        width: 60px;
+        height: 60px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box p {
+        font-size: 3rem;
+        padding: 1.4rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box svg {
+        transform: rotate(0turn);
+        width: 60px;
+        height: 60px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box p {
+        font-size: 3rem;
+        padding: 1.4rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box svg {
+        transform: rotate(0turn);
+        width: 60px;
+        height: 60px;
+
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box p {
+        font-size: 3rem;
+        padding: 1.4rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box svg {
+        transform: rotate(0turn);
+        width: 60px;
+        height: 60px;
+    }
+
+    header .header_wrapper .menu_active {
+        flex-direction: column;
+    }
+
+    header .header_wrapper .menu_active .header_socials {
+        width: 100vw !important;
+        display: block;
+        order: 2;
+    }
+
+    header .header_wrapper .menu_active .header_socials .github {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .github .github_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box {
+        flex-direction: row;
+    }
+
+
+    header .header_wrapper .menu_active .header_socials .linkedin {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .menu_list {
+        width: 100%;
+        justify-content: center;
+    }
+
+    header .header_wrapper .menu_active .menu_list ul li .active::before,
+    header .header_wrapper .menu_active .menu_list ul li a:hover::before {
+        width: 34px;
+        height: 34px;
+        margin-right: 1.2rem;
+    }
+
+    header .header_wrapper .menu_active .menu_list ul {
+        padding-right: 0px;
+        margin: 20px 0px;
+    }
+
+    header .header_wrapper .nav_list_container .nav_button {
+        width: 40px;
+        height: 30px;
+    }
+
+    header .header_wrapper .nav_list_container .nav_active .nav_icon::before {
+        background-color: #10e956;
+        width: 3rem;
+    }
+
+    header .header_wrapper .nav_list_container .nav_active .nav_icon::after {
+        background-color: #10e956;
+        width: 3rem;
+    }
+}
+
+
+@media (max-width: 479px) {
+    header .header_wrapper .menu_active .menu_list ul li a  {
+        font-size: 2rem;
+        letter-spacing: 4px;
+        text-shadow:
+            3px 3px 0 #12d24d,
+            -1px -1px 0 #12d24d,
+            1px -1px 0 #12d24d,
+            -1px 1px 0 #12d24d,
+            1px 1px 0 #12d24d;
+
+        @supports (-webkit-text-stroke: .1px #14e956) {
+            -webkit-text-stroke: .1px #14e956;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    header .header_wrapper .menu_active .header_socials .github .github_box p {
+        font-size: 2rem;
+        padding: 1.4rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .github .github_box svg {
+        transform: rotate(0turn);
+        width: 50px;
+        height: 50px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box p {
+        font-size: 2rem;
+        padding: 1rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box svg {
+        transform: rotate(0turn);
+        width: 50px;
+        height: 50px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box p {
+        font-size: 2rem;
+        padding: 1.4rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box svg {
+        transform: rotate(0turn);
+        width: 50px;
+        height: 50px;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box p {
+        font-size: 2rem;
+        padding: 1rem;
+        -webkit-transform: rotate(0turn);
+        transform: rotate(0turn);
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box svg {
+        transform: rotate(0turn);
+        width: 50px;
+        height: 50px;
+    }
+
+    header .header_wrapper .menu_active {
+        flex-direction: column;
+    }
+
+    header .header_wrapper .menu_active .header_socials {
+        width: 100vw !important;
+        display: block;
+        order: 2;
+    }
+
+    header .header_wrapper .menu_active .header_socials .github {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .github .github_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box {
+        flex-direction: row;
+    }
+
+
+    header .header_wrapper .menu_active .header_socials .linkedin {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .linkedin .linkedin_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .twitter .twitter_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule {
+        width: 100%;
+        height: 5rem;
+    }
+
+    header .header_wrapper .menu_active .header_socials .schedule .schedule_box {
+        flex-direction: row;
+    }
+
+    header .header_wrapper .menu_active .menu_list {
+        width: 100%;
+        justify-content: center;
+    }
+
+    header .header_wrapper .menu_active .menu_list ul li .active::before,
+    header .header_wrapper .menu_active .menu_list ul li a:hover::before {
+        width: 34px;
+        height: 34px;
+        margin-right: 1.2rem;
+    }
+
+    header .header_wrapper .menu_active .menu_list ul {
+        padding-right: 0px;
+        margin: 20px 0px;
+    }
+
+    header .header_wrapper .nav_list_container .nav_button {
+        width: 40px;
+        height: 30px;
+    }
+
+    header .header_wrapper .nav_list_container .nav_active .nav_icon::before {
+        background-color: #10e956;
+        width: 3rem;
+    }
+
+    header .header_wrapper .nav_list_container .nav_active .nav_icon::after {
+        background-color: #10e956;
+        width: 3rem;
+    }
+
 }

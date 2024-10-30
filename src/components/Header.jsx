@@ -16,7 +16,7 @@ const Header = () => {
           </div>
 
           <div className="nav_list_container">
-            <div className="flex flex-center justify-center">
+            <div className="flex flex-center justify-center nav_toggle_container">
               <label
                 for="nav-toggle"
                 className={menu ? "nav_button nav_active" : "nav_button"}
