@@ -47,6 +47,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #050810;
+  scroll-behavior:smooth;
   color: #f5f5f5;
   font-family: Exospace;
   overflow-x: hidden;
@@ -60,4 +61,11 @@ input[type=submit],
 label[for],
 select {
   cursor: url(./assets/IMAGES/link_cursor.svg) 15 15, move !important;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden !important;
+  }
 }

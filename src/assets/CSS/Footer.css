@@ -1,8 +1,9 @@
 footer {
     width: 100%;
+    overflow-x: hidden;
 }
 
-footer .social{
+footer .social {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -12,11 +13,37 @@ footer .social{
     width: 100%;
 }
 
+
+
 footer .social .social_title {
     align-self: center;
     margin-bottom: 4.5rem;
     -webkit-transform: rotate(3.6deg);
     transform: rotate(3.6deg);
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_title {
+        margin-bottom: 4.3rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_title {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_title {
+        margin-bottom: 3.6rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_title {
+        margin-bottom: 3.3rem;
+    }
 }
 
 @supports (-webkit-text-stroke:0.4px #000) {
@@ -37,11 +64,56 @@ footer .social .social_title h2 {
     text-transform: uppercase;
 }
 
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_title h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_title h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_title h2 {
+        font-size: 1.8rem;
+    }
+}
+
 footer .social .social_body {
     align-items: center;
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 footer .social .social_body .github_box {
@@ -57,15 +129,94 @@ footer .social .social_body .github_box {
     width: 25%;
 }
 
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .github_box {
+        width: 50%;
+        padding: 0;
+        justify-content: space-around;
+        height: 6rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .github_box {
+        width: 100%;
+        padding: 0 3rem;
+        justify-content: space-between;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .github_box {
+        width: 100%;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+        height: 4.5rem;
+    }
+}
+
 footer .social .social_body .github_box p {
     font-size: 3.5rem;
     font-weight: 600;
     margin: 0;
 }
 
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .github_box p {
+        font-size: 3.1rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .github_box p {
+        font-size: 2.9rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .github_box p {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .github_box p {
+        font-size: 2.1rem;
+    }
+}
+
 footer .social .social_body .github_box svg {
     height: 85px;
     width: 85px;
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .github_box svg {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .github_box svg {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .github_box svg {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .github_box svg {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 footer .social .social_body .linkedin_box {
@@ -80,15 +231,94 @@ footer .social .social_body .linkedin_box {
     width: 25%
 }
 
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .linkedin_box {
+        width: 50%;
+        padding: 0;
+        justify-content: space-around;
+        height: 6rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .linkedin_box {
+        width: 100%;
+        padding: 0 3rem;
+        justify-content: space-between;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .linkedin_box {
+        width: 100%;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+        height: 4.5rem;
+    }
+}
+
 footer .social .social_body .linkedin_box p {
     font-size: 3.5rem;
     font-weight: 600;
     margin: 0;
 }
 
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .linkedin_box p {
+        font-size: 3.1rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .linkedin_box p {
+        font-size: 2.9rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .linkedin_box p {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .linkedin_box p {
+        font-size: 2.1rem;
+    }
+}
+
 footer .social .social_body .linkedin_box svg {
     height: 85px;
     width: 85px;
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .linkedin_box svg {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .linkedin_box svg {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .linkedin_box svg {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .linkedin_box svg {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 footer .social .social_body .twitter_box {
@@ -103,15 +333,94 @@ footer .social .social_body .twitter_box {
     width: 25%;
 }
 
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .twitter_box {
+        width: 50%;
+        padding: 0;
+        justify-content: space-around;
+        height: 6rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .twitter_box {
+        width: 100%;
+        padding: 0 3rem;
+        justify-content: space-between;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .twitter_box {
+        width: 100%;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+        height: 4.5rem;
+    }
+}
+
 footer .social .social_body .twitter_box p {
     font-size: 3.5rem;
     font-weight: 600;
     margin: 0;
 }
 
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .twitter_box p {
+        font-size: 3.1rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .twitter_box p {
+        font-size: 2.9rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .twitter_box p {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .twitter_box p {
+        font-size: 2.1rem;
+    }
+}
+
 footer .social .social_body .twitter_box svg {
     height: 85px;
     width: 85px;
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .twitter_box svg {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .twitter_box svg {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .twitter_box svg {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .twitter_box svg {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 footer .social .social_body .calendly_box {
@@ -126,15 +435,94 @@ footer .social .social_body .calendly_box {
     width: 25%;
 }
 
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .calendly_box {
+        width: 50%;
+        padding: 0;
+        justify-content: space-around;
+        height: 6rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .calendly_box {
+        width: 100%;
+        padding: 0 3rem;
+        justify-content: space-between;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .calendly_box {
+        width: 100%;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+        height: 4.5rem;
+    }
+}
+
 footer .social .social_body .calendly_box p {
     font-size: 3.5rem;
     font-weight: 600;
     margin: 0;
 }
 
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .calendly_box p {
+        font-size: 3.1rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .calendly_box p {
+        font-size: 2.9rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .calendly_box p {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .calendly_box p {
+        font-size: 2.1rem;
+    }
+}
+
 footer .social .social_body .calendly_box svg {
     height: 85px;
     width: 85px;
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_body .calendly_box svg {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_body .calendly_box svg {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_body .calendly_box svg {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_body .calendly_box svg {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 footer .social .social_mail {
@@ -147,12 +535,43 @@ footer .social .social_mail {
     width: 100%;
 }
 
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_mail {
+        height: 4rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_mail {
+        height: 3.7rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_mail {
+        height: 3.5rem;
+    }
+}
+
 footer .social .social_mail .mail_box {
     align-items: center;
     display: flex;
     height: 100%;
     justify-content: space-between;
     width: 23%;
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_mail .mail_box {
+        width: 50%;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_mail .mail_box {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
 }
 
 footer .social .social_mail .mail_box p {
@@ -164,10 +583,62 @@ footer .social .social_mail .mail_box p {
     text-transform: uppercase;
 }
 
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_mail .mail_box p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_mail .mail_box p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_mail .mail_box p {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_mail .mail_box p {
+        font-size: 1.5rem;
+    }
+}
+
 footer .social .social_mail .mail_box .mail {
     height: 50px;
     margin: -.3rem 0 0;
     width: 50px;
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .social .social_mail .mail_box .mail {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .social .social_mail .mail_box .mail {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .social .social_mail .mail_box .mail {
+        height: 38px;
+        width: 38px;
+    }
+}
+
+@media (max-width: 479px) {
+    footer .social .social_mail .mail_box .mail {
+        height: 40px;
+        width: 40px;
+    }
 }
 
 footer .footer {
@@ -175,7 +646,8 @@ footer .footer {
     background: #1f2128;
     display: flex;
     height: -webkit-max-content;
-    height: max-content;
+    /* height: max-content; */
+    min-height: 100px;
     justify-content: center;
     width: 100%;
 }
@@ -190,32 +662,34 @@ footer .footer p {
     text-transform: capitalize;
 }
 
-footer .footer p span {
-    -webkit-animation: heartBeat 2.5s infinite;
-    animation: heartBeat 2.5s infinite;
-    display: inline-block;
+@media (min-width: 1025px) and (max-width: 1300px) {
+    footer .footer p {
+        font-size: 1.2rem;
+    }
 }
 
-@keyframes heartBeat {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
+@media (min-width: 760px) and (max-width: 1024px) {
+    footer .footer p {
+        font-size: 1.1rem;
     }
-    
-    14% {
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3);
+}
+
+@media (min-width: 480px) and (max-width: 759px) {
+    footer .footer p {
+        font-size: .9rem;
+        text-align: center;
+        padding: .9rem .3rem;
     }
-    28% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
+}
+
+@media (max-width: 479px) {
+    footer .footer p {
+        font-size: .9rem;
+        text-align: center;
+        padding: .7rem .2rem;
     }
-    42% {
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3);
-    }
-    70% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+}
+
+footer .footer p span {
+    display: inline-block;
 }
