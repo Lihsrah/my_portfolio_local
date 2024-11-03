@@ -5,6 +5,7 @@ import Home from "./assets/PAGES/Home";
 import Footer from "./components/Footer";
 import Projects from "./assets/PAGES/Projects";
 
+
 const App = () => {
   return (
     <>

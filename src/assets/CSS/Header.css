@@ -101,16 +101,12 @@ header .header_wrapper .menu_active {
     width: 100% !important;
     height: 100vh !important;
     position: fixed;
-    pointer-events: none;
-    position: fixed;
     top: 0;
-    width: 0;
+    left: 0;
     z-index: 1000;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    overflow: hidden !important;
 }
 
 header .header_wrapper .menu_active .header_socials {
